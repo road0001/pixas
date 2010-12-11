@@ -11,7 +11,7 @@
 	{
 		
 		/**
-		 * construct
+		 * Construct
 		 *
 		 * @param	_border	[optional]	The border color
 		 * @param	_inner	[optional]	The inner fill color

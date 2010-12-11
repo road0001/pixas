@@ -1,7 +1,6 @@
 ﻿package com.risonhuang.pixas.objects.primitives 
 {
 	import com.risonhuang.pixas.objects.AbstractPrimitive;
-	import com.risonhuang.pixas.math.Coord3D;
 	import com.risonhuang.pixas.objects.PixelObject;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
@@ -12,6 +11,7 @@
 	
 	/**
 	 * The Cube class is the primitive for constructing Cube
+	 * <p/>
 	 * The width, height and length could be different depends on the dimension
 	 *
 	 * @author	rison
@@ -22,7 +22,7 @@
 		private var border:Boolean;
 		
 		/**
-		 * construct
+		 * Construct
 		 *
 		 * @param	_dms	[optional]	the dimension obj for rendering
 		 * @param	_color	[optional]	the color obj for rendering

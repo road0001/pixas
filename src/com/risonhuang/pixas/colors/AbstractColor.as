@@ -9,13 +9,33 @@
 	public class AbstractColor
 	{
 		/**
-		 * The colors for elements of certain primitive
+		 * The inner colors for elements of certain primitive
 		 */
 		public var inner:uint;
+
+		/**
+		 * The border colors for elements of certain primitive
+		 */
 		public var border:uint;
+		
+		/**
+		 * The borderHighlight colors for elements of certain primitive
+		 */
 		public var borderHighlight:uint;
+
+		/**
+		 * The left side colors for elements of certain primitive
+		 */
 		public var left:uint;
+		
+		/**
+		 * The right side colors for elements of certain primitive
+		 */
 		public var right:uint;
+		
+		/**
+		 * The horizontal colors for elements of certain primitive
+		 */
 		public var horizontal : uint;
 		
 		public function AbstractColor() 

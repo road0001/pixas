@@ -4,6 +4,7 @@
 
 	/**
 	 * The Coord3D class is the 2.5D pixel position object
+	 * <p/>
 	 * The postion should be int only ,considering the pixel graphic
 	 *
 	 * @author	rison
@@ -11,14 +12,20 @@
 	public class Coord3D
 	{
 		/**
-		 * The 2.5D pixel position x, y, z
+		 * The 2.5D pixel position x
 		 */
 		public var x:int;
+		/**
+		 * The 2.5D pixel position y
+		 */
 		public var y:int;
+		/**
+		 * The 2.5D pixel position z
+		 */
 		public var z:int;
 
 		/**
-		 * construct
+		 * Construct
 		 *
 		 * @param	_x	[optional]	The x position in 2.5D pixel coordinate
 		 * @param	_y	[optional]	The y position in 2.5D pixel coordinate

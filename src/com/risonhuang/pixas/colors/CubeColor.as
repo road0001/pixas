@@ -12,7 +12,7 @@
 		private static const BRIGHTNESS_GAIN : int = - 20;
 		
 		/**
-		 * construct
+		 * Construct
 		 *
 		 * @param	_border	[optional]	The border color
 		 * @param	_borderHighlight	[optional]	The highlight color
