@@ -1,6 +1,6 @@
 ﻿package com.risonhuang.pixas.objects 
 {
-	import com.risonhuang.pixas.math.Int3D;
+	import com.risonhuang.pixas.math.Coord3D;
 	import flash.display.Sprite;
 	
 	/**
@@ -16,7 +16,7 @@
 	public class PixelObject extends Sprite
 	{
 		
-		private var pos:Int3D;
+		private var pos:Coord3D;
 		private var pmt:AbstractPrimitive;
 		
 		/**
@@ -25,7 +25,7 @@
 		 * @param	_pmt	[optional]	The primitive(if it nests certain primitive) of the obj
 		 * @param	_pos	[optional]	The pixel 3d postion of the obj
 		 */
-		public function PixelObject(_pmt:AbstractPrimitive = null,_pos:Int3D = null) 
+		public function PixelObject(_pmt:AbstractPrimitive = null,_pos:Coord3D = null) 
 		{
 			
 			if (_pmt != null)
@@ -35,7 +35,7 @@
 			
 			if (_pos == null)
 			{
-				pos = new Int3D();
+				pos = new Coord3D();
 			}
 			else
 			{
@@ -80,13 +80,13 @@
 		 *
 		 * @param	_pos	The pixel object 3d Pixel position
 		 */
-		public function set position(_pos:Int3D):void
+		public function set position(_pos:Coord3D):void
 		{
 			pos = _pos;
 			place();
 		}
 
-		public function get position():Int3D
+		public function get position():Coord3D
 		{
 			return pos;
 		}
@@ -100,7 +100,7 @@
 		 */
 		public function set positionX(_posX:int):void
 		{
-			pos = new Int3D(_posX,pos.y,pos.z);
+			pos = new Coord3D(_posX,pos.y,pos.z);
 			place();
 		}
 		
@@ -111,7 +111,7 @@
 		
 		public function set positionY(_posY:int):void
 		{
-			pos = new Int3D(pos.x,_posY,pos.z);
+			pos = new Coord3D(pos.x,_posY,pos.z);
 			place();
 		}
 		
@@ -122,7 +122,7 @@
 		
 		public function set positionZ(_posZ:int):void
 		{
-			pos = new Int3D(pos.x,pos.y,_posZ);
+			pos = new Coord3D(pos.x,pos.y,_posZ);
 			place();
 		}
 

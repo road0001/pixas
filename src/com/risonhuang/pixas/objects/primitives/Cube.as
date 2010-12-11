@@ -1,7 +1,7 @@
 ﻿package com.risonhuang.pixas.objects.primitives 
 {
 	import com.risonhuang.pixas.objects.AbstractPrimitive;
-	import com.risonhuang.pixas.math.Int3D;
+	import com.risonhuang.pixas.math.Coord3D;
 	import com.risonhuang.pixas.objects.PixelObject;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;

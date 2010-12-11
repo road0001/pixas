@@ -3,12 +3,12 @@
 	import flash.display.Sprite;
 
 	/**
-	 * The Int3D class is the 2.5D pixel position object
+	 * The Coord3D class is the 2.5D pixel position object
 	 * The postion should be int only ,considering the pixel graphic
 	 *
 	 * @author	rison
 	 */
-	public class Int3D
+	public class Coord3D
 	{
 		/**
 		 * The 2.5D pixel position x, y, z
@@ -24,7 +24,7 @@
 		 * @param	_y	[optional]	The y position in 2.5D pixel coordinate
 		 * @param	_z	[optional]	The z position in 2.5D pixel coordinate
 		 */
-		public function Int3D(_x:int = 0, _y:int = 0, _z:int = 0) 
+		public function Coord3D(_x:int = 0, _y:int = 0, _z:int = 0) 
 		{
 			x = _x;
 			y = _y;
