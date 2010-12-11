@@ -9,10 +9,18 @@
 	{
 		
 		/**
-		* The x, y, z Axis dimensions in 2.5D pixel coordinate
+		* The x Axis dimensions in 2.5D pixel coordinate
 		*/
 		public var xAxis:uint;
+		
+		/**
+		* The y Axis dimensions in 2.5D pixel coordinate
+		*/
 		public var yAxis:uint;
+		
+		/**
+		* The z Axis dimensions in 2.5D pixel coordinate
+		*/
 		public var zAxis:uint;
 		
 		public function AbstractDms() 

@@ -15,7 +15,9 @@
 		
 		/**
 		 * Convert RGB to ARGB value
+		 * <p/>
 		 * If alpha channel needed, one could pass ARGB value
+		 * <p/>
 		 * Like 0xEEFFFF00
 		 *
 		 * @param	_color	the int16 or int32 value uint
@@ -29,6 +31,7 @@
 		
 		/**
 		 * Get the color value after applying brightness
+		 * <p/>
 		 * Add the pixel highlight count by rison
 		 * 
 		 * @author blueshell

@@ -5,13 +5,17 @@
 	
 	/**
 	 * The PixelObject class represents instances of pixel objects.
+	 * <p/>
 	 * Single PixelObject instance could only nest SINGLE primitive.
+	 * <p/>
 	 * Cube,for instance.
+	 * <p/>
 	 * But, it could contain different PixelObjects as many as you want.
+	 * <p/>
 	 * It extends from Sprite,which means you can operate it as a normal Sprite.
 	 *
 	 * @author	rison
-	 * @example	see the examples folder
+	 * @example	See the examples folder
 	 */
 	public class PixelObject extends Sprite
 	{
@@ -20,7 +24,7 @@
 		private var pmt:AbstractPrimitive;
 		
 		/**
-		 * construct
+		 * Construct
 		 *
 		 * @param	_pmt	[optional]	The primitive(if it nests certain primitive) of the obj
 		 * @param	_pos	[optional]	The pixel 3d postion of the obj
@@ -46,7 +50,7 @@
 		}
 				
 		/**
-		 * Remove all the children of the instance
+		 * Remove all the children
 		 */		
 		public function removeAllChild():void
 		{
@@ -58,7 +62,9 @@
 		
 		/**
 		 * Add new attribute of the PixelObject
+		 * <p/>
 		 * One could change the primitive by apply instance.primitive
+		 * <p/>
 		 * Or by pass the primitive in Construct
 		 *
 		 * @param	_pmt	The pixel object primitive(if it nests certain primitive)
@@ -68,7 +74,10 @@
 			pmt = _pmt;
 			generate(pmt);
 		}
-
+		
+		/**
+		 * @return The current primitive instance of the pixel object
+		 */
 		public function get primitive():AbstractPrimitive
 		{
 			return pmt;
@@ -76,6 +85,7 @@
 		
 		/**
 		 * One could change the primitive by apply instance.primitive
+		 * <p/>
 		 * Or by pass the primitive in Construct
 		 *
 		 * @param	_pos	The pixel object 3d Pixel position
@@ -85,18 +95,19 @@
 			pos = _pos;
 			place();
 		}
-
+		
+		/**
+		 * @return The current Coord3D instance of the pixel object
+		 */
 		public function get position():Coord3D
 		{
 			return pos;
 		}
 		
 		/**
-		 * One could get positionX,Y,Z by postion.x
+		 * Set the X position of the pixel object
 		 *
 		 * @param	_posX	The position in X axis
-		 * @param	_posY	The position in Y axis
-		 * @param	_posZ	The position in Z axis
 		 */
 		public function set positionX(_posX:int):void
 		{
@@ -104,28 +115,47 @@
 			place();
 		}
 		
+		/**
+		 * @return The current X position of the pixel object
+		 */
 		public function get positionX():int
 		{
 			return pos.x;
 		}
 		
+		/**
+		 * Set the Y position of the pixel object
+		 *
+		 * @param	_posY	The position in Y axis
+		 */
 		public function set positionY(_posY:int):void
 		{
 			pos = new Coord3D(pos.x,_posY,pos.z);
 			place();
 		}
 		
+		/**
+		 * @return The current Y position of the pixel object
+		 */
 		public function get positionY():int
 		{
 			return pos.y;
 		}
 		
+		/**
+		 * Set the Z position of the pixel object
+		 *
+		 * @param	_posZ	The position in Z axis
+		 */
 		public function set positionZ(_posZ:int):void
 		{
 			pos = new Coord3D(pos.x,pos.y,_posZ);
 			place();
 		}
-
+		
+		/**
+		 * @return The current Z position of the pixel object
+		 */
 		public function get positionZ():int
 		{
 			return pos.z;

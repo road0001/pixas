@@ -1,7 +1,7 @@
 ﻿package com.risonhuang.pixas.math 
 {
 	/**
-	 * The ColorPattern
+	 * The ColorPattern defined some constant bright and joyful Color value
 	 *
 	 * @author	rison
 	 */
@@ -12,9 +12,6 @@
 		{
 		}
 		
-		/**
-		 * The constant bright and joyful Color value
-		 */
 		public static const GRASS_GREEN : uint = 0xCCFF00;	
 		public static const YELLOW : uint = 0xFFFF00;		
 		public static const WINE_RED : uint = 0xFF0099;

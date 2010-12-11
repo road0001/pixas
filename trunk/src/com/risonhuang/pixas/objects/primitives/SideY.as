@@ -15,7 +15,7 @@
 		private var border:Boolean;
 		
 		/**
-		 * construct
+		 * Construct
 		 *
 		 * @param	_dms	[optional]	the dimension obj for rendering
 		 * @param	_color	[optional]	the color obj for rendering

@@ -2,6 +2,7 @@
 {
 	/**
 	 * The AbstractPrimitive class is the super Class of certains primitives
+	 * <p/>
 	 * It has only one internal function which could be called in PixelObject
 	 *
 	 * @author	rison
@@ -15,10 +16,6 @@
 	
 	public class AbstractPrimitive
 	{
-		/**
-		* [internal-use]
-		*/
-		
 		/**
 		* the matrix offset between the bitmap and the 3d pixel coordinate ZERO point
 		*/
@@ -47,7 +44,7 @@
 		
 		
 		/**
-		 * construct
+		 * Construct
 		 */
 		public function AbstractPrimitive() 
 		{
@@ -61,10 +58,13 @@
 		
 		/**
 		 * Once certain primitive instance is initilized,it has to count and set large numbers of pixel.
+		 * <p/>
 		 * Therefore,it could wastes lots of CPU to rebuild the primitive every time.
+		 * <p/>
 		 * Thus,one could generate the bitmap without recount every pixel with the same primitive.
+		 * <p/>
+		 * see	the "bmd.clone()" line
 		 * 
-		 * @see	the "bmd.clone()" line
 		 * @return	the Bitmap of a primitive
 		*/
 		internal function generate():Bitmap

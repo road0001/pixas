@@ -9,7 +9,7 @@
 	{
 		
 		/**
-		 * construct
+		 * Construct
 		 *
 		 * @param	_xAxis	[optional]	The x dimension in 2.5D pixel coordinate
 		 * @param	_yAxis	[optional]	The y dimension in 2.5D pixel coordinate
