@@ -49,7 +49,7 @@
 			return new CubeColor
 			(
 				ColorGeom.applyBrightness(_horizontal, BRIGHTNESS_GAIN * 4),
-				//apply hight
+				//apply hightlight
 				ColorGeom.applyBrightness(_horizontal, 0, true),
 				ColorGeom.applyBrightness(_horizontal, BRIGHTNESS_GAIN * 2),
 				ColorGeom.applyBrightness(_horizontal, BRIGHTNESS_GAIN),

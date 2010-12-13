@@ -52,7 +52,7 @@
 		/**
 		 * Remove all the children
 		 */		
-		public function removeAllChild():void
+		public function removeAllChildren():void
 		{
 			while (this.numChildren > 0)
 			{
@@ -164,7 +164,7 @@
 		
 		private function generate(_pmt:AbstractPrimitive):void
 		{
-			removeAllChild();
+			removeAllChildren();
 			addChild(_pmt.generate());
 		}
 		
