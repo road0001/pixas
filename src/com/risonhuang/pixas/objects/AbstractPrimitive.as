@@ -7,6 +7,7 @@
 	 *
 	 * @author	rison
 	 */
+	import com.risonhuang.pixas.Pixas;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.Sprite;
@@ -22,10 +23,13 @@
 		protected var matrix:Matrix;
 		
 		/**
-		 * the width and the height or the bitmap in 2d flash coordinate
+		 * the width of the bitmap in 2d flash coordinate
+		 */
+		protected var w:uint;
+		/**
+		 * the height of the bitmap in 2d flash coordinate
 		 */
 		protected var h:uint;
-		protected var w:uint;
 		
 		/**
 		 * the dimension of primative in 3d pixel coordinate
@@ -50,6 +54,7 @@
 		{
 			w = h = 0;
 			matrix = new Matrix();
+			Pixas.NAME;
 		}
 		
 		/**

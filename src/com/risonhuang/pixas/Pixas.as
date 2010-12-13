@@ -10,16 +10,29 @@
 	 * 场景是双45° 2.5D 透视
 	 * 
 	 * @author	rison
-	 * @see http://t.sina.com.cn/setmask
-	 * @see http://twitter.com/rison
+	 * @see	http://3.com
 	 */
 	public class Pixas
 	{
+		/**
+		* Enables code page to be retrieved when reviewing a decompiled swf.
+		*/
 		public static const CODE_PAGE : String = "http://code.google.com/p/pixas/";
+		/**
+		* Enables engine name to be retrieved when reviewing a decompiled swf.
+		*/
 		public static const NAME : String = "Pixas";
+		/**
+		* Enables version to be retrieved when reviewing a decompiled swf.
+		*/
 		public static const VERSION :String = "1.0.1";
-		public static const DATE : String = "Dec,2010";
+		/**
+		* Enables author name to be retrieved when reviewing a decompiled swf.
+		*/
 		public static const AUTHOR :String = "Rison Huang";
-		public static const MAIL :String = "risonhuang@gmail.com";
+		/**
+		* Enables tweet to be retrieved when reviewing a decompiled swf.
+		*/
+		public static const TWEET :String = "t.sina.com.cn/setmask , twitter.com/rison";
 	}
 }
