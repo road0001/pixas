@@ -5,6 +5,9 @@
 	 * The AbstractColor class is the super Class of certains color obj
 	 *
 	 * @author	rison
+	 * @usage	seems there is some building problem in FlashDevelop 
+	 * <p/>when you try to access a variable in a child Class
+	 * <p/>so I put all of the variables in the AbstractColor Class
 	 */
 	public class AbstractColor
 	{

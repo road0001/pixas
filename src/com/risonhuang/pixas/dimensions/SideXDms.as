@@ -19,7 +19,6 @@
 			super();
 			
 			xAxis = _xAxis;
-			yAxis = 0;
 			zAxis = _zAxis;
 			
 			if (xAxis % 2 == 1)

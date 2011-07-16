@@ -18,7 +18,6 @@
 		{
 			super();
 			
-			xAxis = 0;
 			yAxis = _yAxis;
 			zAxis = _zAxis;
 			
