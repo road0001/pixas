@@ -20,7 +20,6 @@
 			
 			xAxis = _xAxis;
 			yAxis = _yAxis;
-			zAxis = 0;
 			
 			if (xAxis % 2 == 1 || yAxis % 2 == 1)
 			{

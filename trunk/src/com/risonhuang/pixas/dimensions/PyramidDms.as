@@ -7,7 +7,6 @@ package com.risonhuang.pixas.dimensions
 	 */
 	public class PyramidDms extends AbstractDms
 	{
-		
 		/**
 		 * Construct
 		 *
@@ -20,7 +19,7 @@ package com.risonhuang.pixas.dimensions
 			
 			xAxis = _axis;
 			yAxis = _axis;
-			zAxis = _tall ? _axis*2 : _axis;
+			tall = _tall;
 			
 			if (xAxis % 2 == 1)
 			{
