@@ -25,7 +25,7 @@
 		/**
 		* Enables version to be retrieved when reviewing a decompiled swf.
 		*/
-		public static const VERSION :String = "1.0.1";
+		public static const VERSION :String = "1.1.1";
 		/**
 		* Enables author name to be retrieved when reviewing a decompiled swf.
 		*/
@@ -33,6 +33,6 @@
 		/**
 		* Enables tweet to be retrieved when reviewing a decompiled swf.
 		*/
-		public static const TWEET :String = "t.sina.com.cn/setmask , twitter.com/rison";
+		public static const TWEET :String = "weibo.com/setmask , twitter.com/rison";
 	}
 }
