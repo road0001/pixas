@@ -111,6 +111,15 @@
 			}
 			
 			src_bmd.draw(po);
+			
+			//fix the middle light
+			if (!border)
+			{
+				for (var i:uint = 0; i < dms.zAxis; i++ )
+				{
+					src_bmd.setPixel32(dms.xAxis - 2, dms.xAxis - 1 + i, color.left);
+				}
+			}
 		}
 		
 		private function generateHighLight():Bitmap
