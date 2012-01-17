@@ -3,7 +3,7 @@
 	/**
 	 *	ActionScript generate pixel coordinate system ,pixel graphics.All kinds of meaningless.<p/> 
 	 * The scene is Double 45 ° 2.5D perspective
-	 * <p/> 
+	 * <p/>  
 	 * <p/> 
 	 *	ActionScript 生成像素坐标系,像素图,各种无聊.
 	 * <p/>
