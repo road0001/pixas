@@ -10,7 +10,7 @@
 	 * 场景是双45° 2.5D 透视
 	 * 
 	 * @author	rison
-	 * @see	http://bbs.9ria.com/thread-70227-1-1.html
+	 * @see http://bbs.9ria.com/thread-70227-1-1.html
 	 */
 	public class Pixas
 	{
