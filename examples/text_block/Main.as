@@ -53,13 +53,13 @@
 			color_picker.addEventListener(ColorPickerEvent.CHANGE,__onColorChange);			
 			//txt
 			txt = txt_mc.txt;
-			txt_mc.txt_name.text = "请输入文字:";
+			txt_mc.txt_name.text = "Please Input:";
 			txt.border = true;
 			txt.borderColor = 0xBBBBBB;
 			txt.background = true;
 			txt.backgroundColor = 0xFFFFFF;
 			txt.autoSize = TextFieldAutoSize.LEFT;
-			txt.text = "神马Pixel";
+			txt.text = "iMessage";
 			txt.addEventListener(Event.CHANGE, __onTxtChange);
 
 			//像素对象
@@ -138,7 +138,7 @@
 					var po_brick:PixelObject = new PixelObject(brick,int3d);
 					poFloor.addChild(po_brick);
 					//txt块
-					if (bmd.getPixel(p_x,p_y) < 0xFFFFFF)
+					if (bmd.getPixel(p_x,p_y) < 0x999999)
 					{
 						var po_cube:PixelObject = new PixelObject(cube,int3d);
 						poTxt.addChild(po_cube);
