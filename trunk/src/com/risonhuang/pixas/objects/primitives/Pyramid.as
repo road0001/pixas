@@ -10,7 +10,7 @@ package com.risonhuang.pixas.objects.primitives
 	 * <p/>
 	 * The width could be different depends on the dimension
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class Pyramid extends AbstractPrimitive
 	{

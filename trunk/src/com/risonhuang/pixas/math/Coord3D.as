@@ -3,11 +3,11 @@
 	import flash.display.Sprite;
 
 	/**
-	 * The Coord3D class is the 2.5D pixel position object
+	 * The Coord3D class is the 22.6 degrees projection pixel position object
 	 * <p/>
 	 * The postion should be int only ,considering the pixel graphic
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class Coord3D
 	{

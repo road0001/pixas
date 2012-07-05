@@ -3,14 +3,14 @@ package com.risonhuang.pixas.dimensions
 	/**
 	 * The PyramidDms class represents the dimensions of a pyramid
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class PyramidDms extends AbstractDms
 	{
 		/**
 		 * Construct
 		 *
-		 * @param	_axis [optional] The dimension in 2.5D pixel coordinate
+		 * @param	_axis [optional] The dimension in 22.6 degrees coordinate
 		 * @param	_tall [optional] Whether a tall pyramid
 		 */		
 		public function PyramidDms(_axis:uint = 30, _tall:Boolean = false) 

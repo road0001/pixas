@@ -12,9 +12,9 @@
 	 * <p/>
 	 * But, it could contain different PixelObjects as many as you want.
 	 * <p/>
-	 * It extends from Sprite,which means you can operate it as a normal Sprite.
+	 * It extends from Sprite,which means you can manipulate it as a normal Sprite.
 	 *
-	 * @author	rison
+	 * @author	max
 	 * @example	See the examples folder
 	 */
 	public class PixelObject extends Sprite

@@ -3,7 +3,7 @@
 	/**
 	 * The BrickDms class represents the dimensions of a brick
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class BrickDms extends AbstractDms
 	{
@@ -11,8 +11,8 @@
 		/**
 		 * Construct
 		 *
-		 * @param	_xAxis	[optional]	The x dimension in 2.5D pixel coordinate
-		 * @param	_yAxis	[optional]	The y dimension in 2.5D pixel coordinate
+		 * @param	_xAxis	[optional]	The x dimension in 22.6 degrees coordinate
+		 * @param	_yAxis	[optional]	The y dimension in 22.6 degrees coordinate
 		 */		
 		public function BrickDms(_xAxis:uint = 30,_yAxis:uint = 30) 
 		{
@@ -26,7 +26,7 @@
 				throw new Error("x,yAxis must be even number");
 			}
 			
-			// xAxis || yAxis = 4 时 floodFill 无法填充
+			// xAxis || yAxis = 4 floodFill could not be applied
 			if (xAxis <= 4 || yAxis <=4 )
 			{
 				throw new Error("dimension is too small");

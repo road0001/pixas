@@ -7,7 +7,7 @@
 	 * <p/>when you try to access a variable in a child Class
 	 * <p/>so I put all of the variables in the AbstractDms Class
 	 * 
-	 * @author	rison
+	 * @author	max
 	 */
 	public class AbstractColor
 	{

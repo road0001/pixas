@@ -3,7 +3,7 @@
 	/**
 	 * The CubeDms class represents the dimensions of a cube
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class CubeDms extends AbstractDms
 	{
@@ -11,9 +11,9 @@
 		/**
 		 * Construct
 		 *
-		 * @param	_xAxis	[optional]	The x dimension in 2.5D pixel coordinate
-		 * @param	_yAxis	[optional]	The y dimension in 2.5D pixel coordinate
-		 * @param	_zAxis	[optional]	The z dimension in 2.5D pixel coordinate
+		 * @param	_xAxis	[optional]	The x dimension in 22.6 degrees coordinate
+		 * @param	_yAxis	[optional]	The y dimension in 22.6 degrees coordinate
+		 * @param	_zAxis	[optional]	The z dimension in 22.6 degrees coordinate
 		 */
 		public function CubeDms(_xAxis:uint = 30,_yAxis:uint = 30,_zAxis:uint = 30) 
 		{

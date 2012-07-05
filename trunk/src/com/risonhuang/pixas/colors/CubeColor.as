@@ -5,7 +5,7 @@
 	/**
 	 * The CubeColor class is the olor obj for cube
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class CubeColor extends AbstractColor
 	{

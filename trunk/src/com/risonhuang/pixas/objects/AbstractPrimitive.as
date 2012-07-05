@@ -5,7 +5,7 @@
 	 * <p/>
 	 * It has only one internal function which could be called in PixelObject
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	import com.risonhuang.pixas.Pixas;
 	import flash.display.Bitmap;
@@ -62,11 +62,11 @@
 		*/
 		
 		/**
-		 * Once certain primitive instance is initilized,it has to count and set large numbers of pixel.
+		 * Once certain primitive instance is initilized,it has to caculate and set large numbers of pixel.
 		 * <p/>
 		 * Therefore,it could wastes lots of CPU to rebuild the primitive every time.
 		 * <p/>
-		 * Thus,one could generate the bitmap without recount every pixel with the same primitive.
+		 * Thus,one could generate the bitmap without recaculate every pixel with the same primitive.
 		 * <p/>
 		 * see	the "bmd.clone()" line
 		 * 

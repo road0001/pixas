@@ -5,7 +5,7 @@ package com.risonhuang.pixas.colors
 	/**
 	 * The PyramidColor class is the olor obj for pyramid
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class PyramidColor extends AbstractColor
 	{
