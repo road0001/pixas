@@ -8,7 +8,7 @@
 	/**
 	 * The SideX class is the primitive for constructing Y axis Side
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class SideY extends AbstractPrimitive
 	{

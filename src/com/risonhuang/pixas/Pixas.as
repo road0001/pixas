@@ -1,16 +1,12 @@
 ﻿package com.risonhuang.pixas
 {
 	/**
-	 *	ActionScript generate pixel coordinate system ,pixel graphics.All kinds of meaningless.<p/> 
-	 * The scene is Double 45 ° 2.5D perspective
-	 * <p/>  
+	 * Pixel art is a form of digital art, where images are edited and displayed on the pixel level. The isometric projection is commonly seen in games to provide a 3D view without using any real 3D processing. Technically, lines with a 1:2 pixel ratio are picked, leading to an angle of about 22.6 degrees, which pixels created by would follow a neat pattern.<p/>
+	 * Pixas is an Open Source ActionScript? engine, which enables programmers to build isometric pixel Flash Applications with pure ActionScript3?. With Pixas you can easily add isometric pixel elements like brick, cube, pyramid, map layer to your applications.
 	 * <p/> 
-	 *	ActionScript 生成像素坐标系,像素图,各种无聊.
-	 * <p/>
-	 * 场景是双45° 2.5D 透视
 	 * 
-	 * @author	rison
-	 * @see http://bbs.9ria.com/thread-70227-1-1.html
+	 * @author	max
+	 * @example	See the examples folder
 	 */
 	public class Pixas
 	{
@@ -25,14 +21,10 @@
 		/**
 		* Enables version to be retrieved when reviewing a decompiled swf.
 		*/
-		public static const VERSION :String = "1.1.1";
+		public static const VERSION :String = "1.2.1";
 		/**
 		* Enables author name to be retrieved when reviewing a decompiled swf.
 		*/
-		public static const AUTHOR :String = "Rison Huang";
-		/**
-		* Enables tweet to be retrieved when reviewing a decompiled swf.
-		*/
-		public static const TWEET :String = "weibo.com/setmask , twitter.com/rison";
+		public static const AUTHOR :String = "Max Huang";
 	}
 }

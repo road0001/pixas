@@ -5,7 +5,7 @@
 	/**
 	 * The SideColor class is the olor obj for x or y side
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class SideColor extends AbstractColor
 	{

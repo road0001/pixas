@@ -8,7 +8,7 @@
 	/**
 	 * The Brick class is the primitive for constructing horizontal layers
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class Brick extends AbstractPrimitive
 	{
@@ -50,7 +50,7 @@
 			w = dms.xAxis + dms.yAxis;
 			h = (dms.xAxis + dms.yAxis) / 2;
 			
-			// double 45 ° crossing pixels
+			// 22.6 degrees implementation
 			w -= 2;
 			h -= 1;
 			

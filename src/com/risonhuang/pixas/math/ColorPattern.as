@@ -3,7 +3,7 @@
 	/**
 	 * The ColorPattern defined some constant bright and joyful Color value
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class ColorPattern
 	{

@@ -3,7 +3,7 @@
 	/**
 	 * The SideYDms class represents the dimensions of a y axis side
 	 * 
-	 * @author rison
+	 * @author max
 	 */
 	public class SideYDms extends AbstractDms
 	{
@@ -11,8 +11,8 @@
 		/**
 		 * Construct
 		 *
-		 * @param	_yAxis	[optional]	The y dimension in 2.5D pixel coordinate
-		 * @param	_zAxis	[optional]	The z dimension in 2.5D pixel coordinate
+		 * @param	_yAxis	[optional]	The y dimension in 22.6 degrees coordinate
+		 * @param	_zAxis	[optional]	The z dimension in 22.6 degrees coordinate
 		 */
 		public function SideYDms(_yAxis:uint = 30,_zAxis:uint = 30) 
 		{

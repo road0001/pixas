@@ -3,7 +3,7 @@
 	/**
 	 * The SideXDms class represents the dimensions of a x axis side
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class SideXDms extends AbstractDms
 	{
@@ -11,8 +11,8 @@
 		/**
 		 * Construct
 		 *
-		 * @param	_xAxis	[optional]	The x dimension in 2.5D pixel coordinate
-		 * @param	_zAxis	[optional]	The z dimension in 2.5D pixel coordinate
+		 * @param	_xAxis	[optional]	The x dimension in 22.6 degrees coordinate
+		 * @param	_zAxis	[optional]	The z dimension in 22.6 degrees coordinate
 		 */		
 		public function SideXDms(_xAxis:uint = 30,_zAxis:uint = 30) 
 		{

@@ -2,9 +2,9 @@
 {
 	
 	/**
-	 * The ColorTrim class handles the color number
+	 * The ColorTrim class processes the color number
 	 *
-	 * @author	rison
+	 * @author	max
 	 */
 	public class ColorGeom
 	{
@@ -32,7 +32,7 @@
 		/**
 		 * Get the color value after applying brightness
 		 * <p/>
-		 * Add the pixel highlight count by rison
+		 * Add the pixel highlight
 		 * 
 		 * @author blueshell
 		 * @param color	source color
