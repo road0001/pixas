@@ -1,4 +1,4 @@
-Some applications developed with pixas.
+Applications developed with pixas.
 
 http://code.google.com/p/pixas/
 

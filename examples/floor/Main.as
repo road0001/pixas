@@ -3,6 +3,7 @@
 
 	import flash.display.StageScaleMode;
 	import flash.display.Sprite;
+	import flash.events.MouseEvent;
 	
 	import com.risonhuang.pixas.math.Coord3D;
 	import com.risonhuang.pixas.colors.SideColor;
@@ -10,7 +11,7 @@
 	import com.risonhuang.pixas.objects.primitives.Brick;
 	import com.risonhuang.pixas.objects.PixelObject;	
 	/**
-	 * @author rison
+	 * @author max
 	 */	
 	public class Main extends Sprite
 	{
@@ -22,34 +23,35 @@
 		public function Main()
 		{
 			stage.scaleMode = StageScaleMode.NO_SCALE;
-			//砖块在像素坐标系的尺寸定义
+			//the value of brick dimensions in Pixas coordinate system
 			xDms = 30;
 			yDms = 30;
 			zDms = 0;
 			
-			//外层像素对象
+			//out container
 			po = new PixelObject();
+			//position of out po container in Flash coordinate system
 			po.x = 220;
 			po.y = 60;
-			//砖块尺寸对象
+			//brick dimension object
 			var brickDms:BrickDms = new BrickDms(xDms,yDms);
-			//砖块颜色对象,透明度,需要定义透明度可以传递aRGB颜色如:0x99FFFFFF
+			//brick color object pass aRGB value to assign alpha value like:0x99FFFFFF
 			var sideColorA:SideColor = new SideColor(0xFF777777);
 			var sideColorB:SideColor = new SideColor(0xFF777777,0xFFCCCCCC);
-			//砖块原型生成
+			//brick primitive
 			var brickA:Brick = new Brick(brickDms,sideColorA);
 			var brickB:Brick = new Brick(brickDms,sideColorB);
 
-			//排列
+			//arrangement
 			for (var i:int = 0; i <= 6; i++)
 			{
 				for (var j:int = 0; j <= 6; j++)
 				{
-					//砖块像素坐标系位置
+					//each position in Pixas coordinate system
 					var int3d_tmp:Coord3D = new Coord3D((xDms - 2) * i, (yDms - 2) * j, 0);
-					//像素对象内 nesting 其他像素对象
+					//nesting each PixelObject
 					var po_tmp:PixelObject;
-					//颜色隔开
+					//alternative color 
 					if ((i+j)%2==0)
 					{
 						po_tmp = new PixelObject(brickA,int3d_tmp);
@@ -57,10 +59,24 @@
 					{
 						po_tmp = new PixelObject(brickB,int3d_tmp);
 					}
+					po_tmp.addEventListener(MouseEvent.MOUSE_OVER, __onBrickMouseOver);
+					po_tmp.addEventListener(MouseEvent.MOUSE_OUT, __onBrickMouseOut);
 					po.addChild(po_tmp);
 				}
 			}
 			addChild(po);
+		}
+		
+		private function __onBrickMouseOver(e:MouseEvent):void
+		{
+			var po_tmp:PixelObject = e.target as PixelObject;
+			po_tmp.positionZ = 5;
+		}
+		
+		private function __onBrickMouseOut(e:MouseEvent):void
+		{
+			var po_tmp:PixelObject = e.target as PixelObject;
+			po_tmp.positionZ = 0;
 		}
 	}
 }
