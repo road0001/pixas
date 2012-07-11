@@ -30,24 +30,25 @@
 		public function Main()
 		{
 			stage.scaleMode = StageScaleMode.NO_SCALE;
-			//砖块在像素坐标系的尺寸定义
+			//the value of cube dimensions in Pixas coordinate system
 			dms = 60;
-			//enterframe判断依据
+			//enterframe count
 			count = 2;
-			//是否为高pyramid
+			//whether to draw tall pyramid
 			tall = false;
 			
-			//外层像素对象
+			//out container
 			po = new PixelObject();
+			//position of out po container in Flash coordinate system
 			po.x = 220;
 			po.y = 140;			
 			
-			//pyramid
+			//pyramid primitive
 			pyramidColor = PyramidColor.getByRightColor(ColorPattern.PINK);
 			pPyramid = new PixelObject();
 			updatePyramid();
 			
-			//控制区域
+			//control area
 			pane.btn_big.addEventListener(MouseEvent.CLICK, __onBtnSizeClick);
 			pane.btn_small.addEventListener(MouseEvent.CLICK, __onBtnSizeClick);
 			color_picker.selectedColor = ColorPattern.PINK;
@@ -56,8 +57,9 @@
 			pane.btn_x_plus.addEventListener(MouseEvent.MOUSE_UP,__onBtnUp);
 			pane.btn_x_minus.addEventListener(MouseEvent.MOUSE_DOWN,__onBtnDown);
 			pane.btn_x_minus.addEventListener(MouseEvent.MOUSE_UP, __onBtnUp);
+			this.stage.addEventListener(MouseEvent.MOUSE_UP,__onBtnUp);
 			
-			//深度排序
+			//depth sort
 			addChild(po);
 			addChild(pane);
 			addChild(color_picker);
@@ -97,12 +99,12 @@
 		private function __enterFrame(e:Event):void
 		{
 			dms += count;
-			//最小界限
+			//the minimum value
 			if (dms<6)
 			{
 				dms=6;
 			}
-			//最小界限
+			//the maximum value
 			if (dms>300)
 			{
 				dms=300;
@@ -116,7 +118,7 @@
 			pPyramid.removeAllChildren();
 			po.removeAllChildren();
 
-			//刷新pixelobject,由于尺寸变化,则必须重绘,重新生成Pyramid原型.
+			//refresh pixelobject rendering
 			var pyramidDms:PyramidDms=new PyramidDms(dms,tall);
 			var pyramid:Pyramid=new Pyramid(pyramidDms,pyramidColor);
 			pPyramid=new PixelObject(pyramid);

@@ -16,7 +16,7 @@
 	import com.risonhuang.pixas.objects.PixelObject;
 
 	/**
-	 * @author rison
+	 * @author max
 	 */	
 	public class Main extends Sprite
 	{
@@ -32,16 +32,17 @@
 		public function Main()
 		{
 			stage.scaleMode = StageScaleMode.NO_SCALE;
-			//砖块在像素坐标系的尺寸定义
+			//the value of cube dimensions in Pixas coordinate system
 			xDms = 60;
 			yDms = 60;
 			zDms = 60;
 			axis = "x";
-			//enterframe判断依据
+			//enterframe count
 			count = 2;
 			
-			//外层像素对象
+			//out container
 			po = new PixelObject();
+			//position of out po container in Flash coordinate system
 			po.x = 220;
 			po.y = 140;			
 			
@@ -50,7 +51,7 @@
 			pCube = new PixelObject();
 			updateCube();
 			
-			//控制区域
+			//control area
 			color_picker.selectedColor = ColorPattern.PINK;
 			color_picker.addEventListener(ColorPickerEvent.CHANGE,onColorChange);
 			pane.btn_x_plus.addEventListener(MouseEvent.MOUSE_DOWN,__onBtnDown);
@@ -65,8 +66,9 @@
 			pane.btn_z_plus.addEventListener(MouseEvent.MOUSE_UP,__onBtnUp);
 			pane.btn_z_minus.addEventListener(MouseEvent.MOUSE_DOWN,__onBtnDown);
 			pane.btn_z_minus.addEventListener(MouseEvent.MOUSE_UP,__onBtnUp);
+			this.stage.addEventListener(MouseEvent.MOUSE_UP,__onBtnUp);
 			
-			//深度排序
+			//depth sort
 			addChild(po);
 			addChild(pane);
 			addChild(color_picker);
@@ -125,7 +127,7 @@
 					zDms+=count;
 				}
 			}
-			//最小界限
+			//the minimum value
 			if (xDms<6)
 			{
 				xDms=6;
@@ -146,7 +148,7 @@
 			pCube.removeAllChildren();
 			po.removeAllChildren();
 
-			//刷新pixelobject,由于尺寸变化,则必须重绘,重新生成Cube原型.
+			//refresh pixelobject rendering
 			var cubeDms:CubeDms=new CubeDms(xDms,yDms,zDms);
 			var cube:Cube=new Cube(cubeDms,cubeColor);
 			pCube=new PixelObject(cube);

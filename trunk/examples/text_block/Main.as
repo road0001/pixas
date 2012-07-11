@@ -20,7 +20,7 @@
 	import com.risonhuang.pixas.dimensions.BrickDms;
 	import com.risonhuang.pixas.objects.primitives.Brick;
 	/**
-	 * @author rison
+	 * @author max
 	 */	
 	public class Main extends Sprite
 	{
@@ -40,15 +40,15 @@
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
 			
-			//砖块在像素坐标系的尺寸定义
+			//the value of cube dimensions in Pixas coordinate system
 			xDms = 16;
 			yDms = 16;
 			zDms = 20;
 			
-			//是否描边
+			//whether show border
 			border = false;
 
-			//颜色
+			//color
 			color_picker.selectedColor = ColorPattern.WINE_RED;
 			color_picker.addEventListener(ColorPickerEvent.CHANGE,__onColorChange);			
 			//txt
@@ -62,22 +62,22 @@
 			txt.text = "iMessage";
 			txt.addEventListener(Event.CHANGE, __onTxtChange);
 
-			//像素对象
+			//out container
 			var po:PixelObject = new PixelObject();
-			//地板像素对象
+			//floor container
 			poFloor = new PixelObject();
-			//砖块原型生成
+			//brick primitive
 			var brickDms:BrickDms = new BrickDms(xDms,yDms);
 			var sideColor:SideColor = new SideColor(0xBBBBBB);
 			brick = new Brick(brickDms,sideColor);
-			//text像素对象
+			//text display container
 			poTxt = new PixelObject();
-			//cube原型生成
+			//cube primitive
 			var cubeDms:CubeDms = new CubeDms(xDms,yDms,zDms);
 			var cubeColor:CubeColor = CubeColor.getByHorizontalColor(ColorPattern.WINE_RED);
 			cube = new Cube(cubeDms, cubeColor, border);
 			
-			//add to stage
+			//add floor container and text display container to out container
 			po.addChild(poFloor);
 			po.addChild(poTxt);
 			po.x = 173;
@@ -93,7 +93,7 @@
 		
 		private function __onColorChange(event:ColorPickerEvent):void
 		{
-			//cube原型生成
+			//reset color primitive
 			var cubeDms:CubeDms = new CubeDms(xDms,yDms,zDms);
 			var cubeColor:CubeColor = CubeColor.getByHorizontalColor(event.target.selectedColor);
 			cube = new Cube(cubeDms, cubeColor, border);
@@ -134,10 +134,10 @@
 				for (p_x =0; p_x<txtWidth; p_x++)
 				{
 					var int3d:Coord3D = new Coord3D((xDms - 2) * p_x, (yDms - 2) * p_y, 0);
-					//地砖
+					//each brick PixelObject
 					var po_brick:PixelObject = new PixelObject(brick,int3d);
 					poFloor.addChild(po_brick);
-					//txt块
+					//each text display PixelObject
 					if (bmd.getPixel(p_x,p_y) < 0x999999)
 					{
 						var po_cube:PixelObject = new PixelObject(cube,int3d);

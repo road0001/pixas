@@ -12,11 +12,10 @@
 	import com.risonhuang.pixas.objects.primitives.Cube;
 	import com.risonhuang.pixas.objects.PixelObject;
 	/**
-	 * @author rison
+	 * @author max
 	 */	
 	public class Main extends Sprite
 	{
-		//铁轨
 		private static const WOOD_WIDTH:uint = 124;
 		private static const WOOD_HEIGHT:uint = 8;
 		private static const WOOD_LENGTH:uint = 14;
@@ -44,11 +43,11 @@
 			var steel_padding:uint = (WOOD_WIDTH - STEEL_WIDTH * 2 - STEEL_SPACE) / 2;
 			
 			var poRail:PixelObject = new PixelObject();
-			//枕木原型生成
+			//wood primitive
 			var woodDms:CubeDms = new CubeDms(WOOD_LENGTH,WOOD_WIDTH,WOOD_HEIGHT);
 			var woodColor:CubeColor = CubeColor.getByHorizontalColor(WOOD_COLOR);
 			var cubeWood:Cube = new Cube(woodDms,woodColor);
-			//钉子原型生成
+			//nail primitive
 			var cubeNail:Cube = new Cube(new CubeDms(6,6,4),CubeColor.getByHorizontalColor(NAIL_COLOR));
 			var poNail:PixelObject;
 			for (i = 0; i <= WOOD_NUMBER; i++)
@@ -58,13 +57,14 @@
 				poRail.addChild(poWood);
 				poRail.addChild(poNail);
 			}
-			//钢轨原型生成
+			//steel primitive
 			var cubeSteel: Cube = new Cube(new CubeDms((WOOD_SPACE + WOOD_LENGTH) * i, STEEL_WIDTH, STEEL_HEIGHT),CubeColor.getByHorizontalColor(STEEL_COLOR));
 			var poSteelA:PixelObject = new PixelObject(cubeSteel,new Coord3D(0,WOOD_WIDTH - steel_padding,WOOD_HEIGHT));
 			var poSteelB:PixelObject = new PixelObject(cubeSteel,new Coord3D(0,steel_padding,WOOD_HEIGHT));
 			poRail.addChild(poSteelA);
 			poRail.addChild(poSteelB);
-			//再次循环加入外层钉子,防止深度出错
+
+			//add outside nail
 			for (i = 0; i <= WOOD_NUMBER; i++)
 			{
 				poNail = new PixelObject(cubeNail,new Coord3D((WOOD_SPACE + WOOD_LENGTH) * i+NAIL_PADDING,WOOD_WIDTH-NAIL_PADDING - NAIL_WIDTH,WOOD_HEIGHT));
@@ -72,7 +72,6 @@
 			}
 			poRail.positionZ = 20 ;
 			
-			//加入场景
 			addChild(poRail);
 		}
 	}
