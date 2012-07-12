@@ -39,7 +39,7 @@
 		 * @param brightness	brightness intend to apply on the source color
 		 * @return target color
 		 * @see http://bbs.9ria.com/thread-810-1-1.html
-		*/
+		 */
 		public static function applyBrightness (color : uint, brightness : int,highlight:Boolean = false) :uint 
 		{
                 
