@@ -117,7 +117,7 @@
 			{
 				for (var i:uint = 0; i < dms.zAxis; i++ )
 				{
-					src_bmd.setPixel32(dms.xAxis - 2, dms.xAxis - 1 + i, color.left);
+					src_bmd.setPixel32(dms.xAxis - 2, (dms.xAxis + dms.yAxis) / 2 - 1 + i, color.left);
 				}
 			}
 		}
