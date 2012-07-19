@@ -176,7 +176,7 @@
 			if (match_index == -1)
 			{
 				//color mismatch, create new cube
-				var cubeDms:CubeDms = new CubeDms(xDms*SEP,yDms*SEP,zDms);
+				var cubeDms:CubeDms = new CubeDms((xDms-2)*SEP,(yDms-2)*SEP,zDms);
 				var cubeColor:CubeColor = CubeColor.getByHorizontalColor(now_color);
 				cube = new Cube(cubeDms, cubeColor, false);
 				
@@ -189,9 +189,8 @@
 				//get cube from pool
 				cube = cubes[match_index];
 			}
-			
 			//add to carton frame po
-			var pos3d:Coord3D = new Coord3D((xDms - 2) * p_x *SEP, (yDms - 2) * p_y *SEP, 0);
+			var pos3d:Coord3D = new Coord3D(((xDms - 2)  *SEP - 2)* p_x, ((yDms - 2)  *SEP - 2)* p_y, 0);
 			var poCube:PixelObject = new PixelObject(cube, pos3d);
 			poUncle.addChild(poCube);
 		}
