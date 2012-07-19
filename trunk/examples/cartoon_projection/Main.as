@@ -76,10 +76,10 @@
 			po.addChild(poFrame);
 			po.addChild(poUncle);
 			po.x = 300;
-			po.y = 120;			
+			po.y = 110;			
 			addChild(po);
 			
-			uncles = [uncle1, uncle2, uncle3, uncle4];
+			uncles = [uncle1, uncle2, uncle3, uncle4, uncle5];
 			for (var i:uint = 0; i < uncles.length; i++ )
 			{
 				uncles[i].stop();
@@ -113,7 +113,7 @@
 			}
 			if (e == null)
 			{
-				mov = uncles[0];
+				mov = uncles[Math.floor(Math.random()*uncles.length)];
 			}
 			else
 			{
@@ -122,6 +122,10 @@
 			
 			movWidth = mov.width;
 			movHeight = mov.height;
+			if (mov == uncle5)
+			{
+				movWidth = 160;
+			}
 			mov.play();
 			
 			rebuildFrame();
