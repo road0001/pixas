@@ -128,10 +128,10 @@
 		{
 			poFrame.removeAllChildren();
 			poUncle.removeAllChildren();
-			var cubeFrameDms:CubeDms = new CubeDms((movWidth+3)*(xDms-2),(movHeight+3)*(yDms-2),zDms);
+			var cubeFrameDms:CubeDms = new CubeDms((movWidth+7)*(xDms-2),(movHeight+7)*(yDms-2),zDms);
 			var cubeColor:CubeColor = CubeColor.getByHorizontalColor(0xF6F6F6);
 			cubeFrame = new Cube(cubeFrameDms, cubeColor,false);
-			var pos3d:Coord3D = new Coord3D(-1.5*(xDms-2), -1.5*(yDms-2), -zDms);
+			var pos3d:Coord3D = new Coord3D(-3.5*(xDms-2), -3.5*(yDms-2), -zDms);
 			poFrame.addChild(new PixelObject(cubeFrame,pos3d));
 		}
 		
