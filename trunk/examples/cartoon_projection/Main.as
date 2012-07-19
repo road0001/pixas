@@ -46,6 +46,8 @@
 		private var cubes:Array = [];
 		//ask unclebig2d why -.-
 		private static const SEP:uint = 4;
+		//enlarge rate
+		private static const RATE:uint = 3;
 		
 		
 		public function Main()
@@ -128,10 +130,10 @@
 		{
 			poFrame.removeAllChildren();
 			poUncle.removeAllChildren();
-			var cubeFrameDms:CubeDms = new CubeDms((movWidth+7)*(xDms-2),(movHeight+7)*(yDms-2),zDms);
+			var cubeFrameDms:CubeDms = new CubeDms((movWidth+6)*(xDms-2),(movHeight+6)*(yDms-2),zDms);
 			var cubeColor:CubeColor = CubeColor.getByHorizontalColor(0xF6F6F6);
 			cubeFrame = new Cube(cubeFrameDms, cubeColor,false);
-			var pos3d:Coord3D = new Coord3D(-3.5*(xDms-2), -3.5*(yDms-2), -zDms);
+			var pos3d:Coord3D = new Coord3D(-3*(xDms-2), -3*(yDms-2), -zDms);
 			poFrame.addChild(new PixelObject(cubeFrame,pos3d));
 		}
 		
@@ -176,7 +178,7 @@
 			if (match_index == -1)
 			{
 				//color mismatch, create new cube
-				var cubeDms:CubeDms = new CubeDms((xDms-2)*SEP,(yDms-2)*SEP,zDms);
+				var cubeDms:CubeDms = new CubeDms(xDms*RATE,yDms*RATE,zDms);
 				var cubeColor:CubeColor = CubeColor.getByHorizontalColor(now_color);
 				cube = new Cube(cubeDms, cubeColor, false);
 				
@@ -190,7 +192,7 @@
 				cube = cubes[match_index];
 			}
 			//add to carton frame po
-			var pos3d:Coord3D = new Coord3D(((xDms - 2)  *SEP - 2)* p_x, ((yDms - 2)  *SEP - 2)* p_y, 0);
+			var pos3d:Coord3D = new Coord3D((xDms *RATE - 2)* p_x, (yDms *RATE - 2)* p_y, 0);
 			var poCube:PixelObject = new PixelObject(cube, pos3d);
 			poUncle.addChild(poCube);
 		}
