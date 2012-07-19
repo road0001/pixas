@@ -63,7 +63,7 @@
 			//dimension
 			xDms = 6;
 			yDms = 6;
-			zDms = 8;
+			zDms = 10;
 
 			//out container
 			var po:PixelObject = new PixelObject();
