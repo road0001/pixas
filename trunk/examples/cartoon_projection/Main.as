@@ -44,6 +44,8 @@
 		//data pool
 		private var colors:Array = [];
 		private var cubes:Array = [];
+		//ask unclebig2d why -.-
+		private static const SEP:uint = 4;
 		
 		
 		public function Main()
@@ -143,9 +145,9 @@
 
 			var p_y:uint = 0;
 			var p_x:uint = 0;
-			for (p_y=0; p_y< movHeight; p_y++)
+			for (p_y=0; p_y< movHeight/SEP; p_y++)
 			{
-				for (p_x =0; p_x< movWidth; p_x++)
+				for (p_x =0; p_x< movWidth/SEP; p_x++)
 				{
 					handlePixel(p_x, p_y);
 				}
@@ -156,7 +158,7 @@
 		private function handlePixel(p_x:uint, p_y:uint):void
 		{
 			//construct cube primitive pool
-			var now_color:uint = bmd.getPixel(p_x, p_y);
+			var now_color:uint = bmd.getPixel(p_x*SEP, p_y*SEP);
 			if (now_color >= 0xFFFFFF)
 			{
 				return;
@@ -174,7 +176,7 @@
 			if (match_index == -1)
 			{
 				//color mismatch, create new cube
-				var cubeDms:CubeDms = new CubeDms(xDms,yDms,zDms);
+				var cubeDms:CubeDms = new CubeDms(xDms*SEP,yDms*SEP,zDms);
 				var cubeColor:CubeColor = CubeColor.getByHorizontalColor(now_color);
 				cube = new Cube(cubeDms, cubeColor, false);
 				
@@ -189,7 +191,7 @@
 			}
 			
 			//add to carton frame po
-			var pos3d:Coord3D = new Coord3D((xDms - 2) * p_x, (yDms - 2) * p_y, 0);
+			var pos3d:Coord3D = new Coord3D((xDms - 2) * p_x *SEP, (yDms - 2) * p_y *SEP, 0);
 			var poCube:PixelObject = new PixelObject(cube, pos3d);
 			poUncle.addChild(poCube);
 		}
