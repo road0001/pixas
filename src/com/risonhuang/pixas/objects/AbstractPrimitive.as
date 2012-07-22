@@ -1,10 +1,11 @@
 ﻿package com.risonhuang.pixas.objects
 {
 	/**
-	 * The AbstractPrimitive class is the super Class of certains primitives
-	 * <p/>
-	 * It has only one internal function which could be called in PixelObject
-	 *
+	 * The AbstractPrimitive class is the super Class of primitives.
+	 * <p/> It is not allowed to add primitives onto the stage directly. 
+	 * <p/> Instead of, you should assign it as a parameter when creating instance of PixelObject, 
+	 * <p/> or set it to the primitive property of the PixelObject instance.
+	 * <p/> then add the PixelObject onto the stage as a Sprite
 	 * @author	max
 	 */
 	import com.risonhuang.pixas.Pixas;
@@ -62,11 +63,9 @@
 		*/
 		
 		/**
-		 * Once certain primitive instance is initilized,it has to caculate and set large numbers of pixel.
+		 * The Primitive Classes generate bitmap for PixelObject
 		 * <p/>
-		 * Therefore,it could wastes lots of CPU to rebuild the primitive every time.
-		 * <p/>
-		 * Thus,one could generate the bitmap without recaculate every pixel with the same primitive.
+		 * All of these bitmap could be reused in PixelObject without caculating again.
 		 * <p/>
 		 * see	the "bmd.clone()" line
 		 * 

@@ -5,14 +5,14 @@
 	
 	/**
 	 * The PixelObject class represents instances of pixel objects.
-	 * <p/>
-	 * Single PixelObject instance could only nest SINGLE primitive.
-	 * <p/>
-	 * Cube,for instance.
-	 * <p/>
-	 * But, it could contain different PixelObjects as many as you want.
-	 * <p/>
-	 * It extends from Sprite,which means you can manipulate it as a normal Sprite.
+	 * <p/> A PixelObject instance could only nest SINGLE primitive,
+	 * <p/> cube, for instance.
+	 * <p/> However, you can add as many as PixelObjects to a single PixelObject.
+	 * <p/> It extends from Sprite, which means you can manipulate it as a normal Sprite.
+	 * <p/> 
+	 * <p/> To use it, you should assign a primitive instance as a parameter when creating instance of PixelObject
+	 * <p/> or set it to the primitive property of the PixelObject instance,
+	 * <p/> then add the PixelObject onto the stage as a Sprite
 	 *
 	 * @author	max
 	 * @example	See the examples folder
