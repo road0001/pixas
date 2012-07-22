@@ -2,8 +2,7 @@
 {
 	/**
 	 * The AbstractDms class is the super Class of certains dimension
-	 * <p/>seems there is a building problem in FlashDevelop 
-	 * <p/>when you try to access a variable in a child Class
+	 * <p/>seems there is a building problem in FlashDevelop when I tried to access a variable in a child Class
 	 * <p/>so I put all of the variables in the AbstractDms Class
 	 *
 	 * @author	max
