@@ -1,13 +1,5 @@
 ﻿package com.risonhuang.pixas.objects
 {
-	/**
-	 * The AbstractPrimitive class is the super Class of primitives.
-	 * <p/> It is not allowed to add primitives onto the stage directly. 
-	 * <p/> Instead of, you should assign it as a parameter when creating instance of PixelObject, 
-	 * <p/> or set it to the primitive property of the PixelObject instance.
-	 * <p/> then add the PixelObject onto the stage as a Sprite
-	 * @author	max
-	 */
 	import com.risonhuang.pixas.Pixas;
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
@@ -15,6 +7,16 @@
 	import com.risonhuang.pixas.colors.AbstractColor;
 	import com.risonhuang.pixas.dimensions.AbstractDms;
 	import flash.geom.Matrix;
+	
+	/**
+	 * The AbstractPrimitive class is the super Class of primitives.
+	 * <p/> It is not allowed to add primitives onto the stage directly. 
+	 * <p/> Instead of, you should assign it as a parameter when creating instance of PixelObject, 
+	 * <p/> or set it to the primitive property of the PixelObject instance.
+	 * <p/> then add the PixelObject onto the stage as a Sprite
+	 * 
+	 * @author	max
+	 */
 	
 	public class AbstractPrimitive
 	{
