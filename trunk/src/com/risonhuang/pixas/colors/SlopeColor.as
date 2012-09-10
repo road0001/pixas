@@ -3,7 +3,7 @@ package com.risonhuang.pixas.colors
 	import  com.risonhuang.pixas.math.ColorGeom;
 	
 	/**
-	 * The SlopeColor class is the color obj for cube
+	 * The SlopeColor class is the color obj for slopes
 	 *
 	 * @author	max
 	 */
