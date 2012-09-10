@@ -3,7 +3,7 @@ package com.risonhuang.pixas.colors
 	import  com.risonhuang.pixas.math.ColorGeom;
 	
 	/**
-	 * The SlopeColor class is the olor obj for cube
+	 * The SlopeColor class is the color obj for cube
 	 *
 	 * @author	max
 	 */
@@ -43,10 +43,10 @@ package com.risonhuang.pixas.colors
 		
 		/**
 		 * get color instance by count transition with horizontal side
-		 * horizontal side doesn't exist in the Slope primitive
-		 * you can assign the same horizontal color as cube to arrange the slot with cube
+		 * <p/>horizontal side doesn't exist in the Slope primitive
+		 * <p/>you can assign the same horizontal color as cube to arrange the slot with cube
 		 *
-		 * @param	_horizontal	[optional]	The horizontal color
+		 * @param	_horizontal	The horizontal color
 		 * @return	An SlopeColor instance
 		 */		
 		public static function getByHorizontalColor(_horizontal:uint):SlopeColor
